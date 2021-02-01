@@ -10,7 +10,7 @@ const BookList = () => (
       </tr>
     </thead>
     <tbody>
-      <Book />
+        <Book />
     </tbody>
   </table>
 );
