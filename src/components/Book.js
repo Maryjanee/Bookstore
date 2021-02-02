@@ -8,6 +8,7 @@ const Book = props => {
       <td>{bookId}</td>
       <td>{bookTitle}</td>
       <td>{bookCategory}</td>
+      <td><button type="button">Remove Book</button></td>
     </tr>
   );
 };
