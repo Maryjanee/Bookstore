@@ -13,8 +13,14 @@ const BookList = ({ books }) => (
       </tr>
     </thead>
     <tbody>
-      <div>{books}</div>
-      <Book />
+      {books.map(book => (
+        <Book
+          key={book.id}
+          bookId={book.id}
+          bookCategory={book.category}
+          bookTitle={book.title}
+        />
+      ))}
     </tbody>
   </table>
 );
@@ -28,7 +34,7 @@ BookList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  books: state.books,
+  books: state.bookReducer.books,
 });
 
 export default connect(mapStateToProps)(BookList);
