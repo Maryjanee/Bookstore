@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 
-import BookForm from './components/BookForm';
-import BookList from './containers/BookList';
+import BookForm from '../containers/BookForm';
+import BookList from '../containers/BookList';
 
 const App = () => (
   <div>
