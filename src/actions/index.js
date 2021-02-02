@@ -1,11 +1,11 @@
-const CREATE_BOOK = book => ({
+import { CREATE_BOOK, REMOVE_BOOK } from '../constants';
+
+export const createBook = book => ({
   type: CREATE_BOOK,
   payload: book,
 });
 
-const REMOVE_BOOK = book => ({
+export const removeBook = bookId => ({
   type: REMOVE_BOOK,
-  payload: book.id,
+  payload: bookId,
 });
-
-export { CREATE_BOOK, REMOVE_BOOK };
