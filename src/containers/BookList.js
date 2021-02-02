@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
+import { removeBook } from '../actions';
 import Book from '../components/Book';
 
-const BookList = ({ books }) => (
+const BookList = ({ books, handleRemoveBook }) => (
   <table>
     <thead>
       <tr>
@@ -20,6 +20,7 @@ const BookList = ({ books }) => (
           bookId={book.id}
           bookCategory={book.category}
           bookTitle={book.title}
+          removeBook={handleRemoveBook}
         />
       ))}
     </tbody>
@@ -28,6 +29,7 @@ const BookList = ({ books }) => (
 
 BookList.propTypes = {
   books: PropTypes.instanceOf(Array),
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 BookList.defaultProps = {
@@ -38,4 +40,8 @@ const mapStateToProps = state => ({
   books: state.bookReducer.books,
 });
 
-export default connect(mapStateToProps)(BookList);
+const mapDispatchToProps = dispatch => ({
+  handleRemoveBook: bookId => dispatch(removeBook(bookId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
