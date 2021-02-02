@@ -1,3 +1,4 @@
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const bookReducer = (state = [], action) => {
   switch (action.type) {
@@ -8,6 +9,6 @@ const bookReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export default bookReducer;

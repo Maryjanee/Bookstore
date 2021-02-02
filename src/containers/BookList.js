@@ -27,10 +27,8 @@ BookList.defaultProps = {
   books: [],
 };
 
-const mapStateToProps = state => {
-  return{
-    books:state.books
-  };
-};
+const mapStateToProps = state => ({
+  books: state.books,
+});
 
 export default connect(mapStateToProps)(BookList);
