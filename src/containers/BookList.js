@@ -1,6 +1,9 @@
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import Book from '../components/Book';
 
-const BookList = () => (
+const BookList = ({ books }) => (
   <table>
     <thead>
       <tr>
@@ -10,9 +13,24 @@ const BookList = () => (
       </tr>
     </thead>
     <tbody>
-        <Book />
+      <div>{books}</div>
+      <Book />
     </tbody>
   </table>
 );
 
-export default BookList;
+BookList.propTypes = {
+  books: PropTypes.instanceOf(Array),
+};
+
+BookList.defaultProps = {
+  books: [],
+};
+
+const mapStateToProps = state => {
+  return{
+    books:state.books
+  };
+};
+
+export default connect(mapStateToProps)(BookList);

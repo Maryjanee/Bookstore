@@ -1,9 +1,11 @@
+/* eslint-disable  no-unused-vars */
+
 const initialState = {
- books: []
+  books: [],
 };
 
 function bookReducer(state = initialState, action) {
   return state;
-};
+}
 
 export default bookReducer;

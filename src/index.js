@@ -1,16 +1,22 @@
+/* eslint-disable  no-unused-vars */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux';
-import BookReducer from './reducers/book'
+import BookReducer from './reducers/book';
 
 const store = createStore(BookReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+
   </React.StrictMode>,
   document.getElementById('root'),
 );
