@@ -7,30 +7,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import BookReducer from './reducers/book';
-import generateID from './helpers/generateID';
+import reducers from './reducers';
 
-const initialState = {
-  books: [
-    {
-      id: generateID(),
-      title: 'Learn Redux',
-      category: 'Learning',
-    },
-    {
-      id: generateID(),
-      title: 'Simbi Goes to School',
-      category: 'Kids',
-    },
-    {
-      id: generateID(),
-      title: 'The man at the top',
-      category: 'Horror',
-    },
-  ],
-};
-
-const store = createStore(BookReducer);
+const store = createStore(reducers);
 
 ReactDOM.render(
   <React.StrictMode>
