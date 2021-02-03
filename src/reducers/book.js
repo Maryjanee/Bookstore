@@ -19,6 +19,7 @@ const initialState = {
       category: 'Horror',
     },
   ],
+  filter: 'Horror',
 };
 
 const bookReducer = (state = initialState, action) => {
