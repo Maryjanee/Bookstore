@@ -36,7 +36,7 @@ const BookForm = () => {
         <label htmlFor="booksCategory">
           Select a category
           <select onChange={handleChange} name="category" id="category">
-            <option value="">Please select a category</option>
+            <option value="All">All</option>
             {bookCategories.map(category => (
               <option key={category} value={category}>{category}</option>
             ))}
