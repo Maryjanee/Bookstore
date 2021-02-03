@@ -19,6 +19,7 @@ const BookForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const newBook = { ...book, id: generateId() };
+    console.log('value', newBook);
 
     dispatch(createBook(newBook));
     setBook({ title: '', category: '' });
