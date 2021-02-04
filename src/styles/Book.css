@@ -1,0 +1,70 @@
+
+ svg, circle {
+	width: 200px;
+	height: 200px;
+}
+
+circle {
+	position: absolute;
+	fill: none;
+	stroke-width: 10;
+	transform: translate(10px, 10px);
+	stroke-dasharray: 440;
+	stroke-linecap: round;
+}
+
+circle:nth-child(1) {
+	stroke-dashoffset: 0;
+	stroke: #fff;
+}
+
+.percent1 circle:nth-child(2) {
+	stroke-dashoffset: calc(50 - (10 * 25) / 100);
+	stroke:var(--blue);
+	animation: percent 1.5s linear;
+	animation-delay: 1s;
+}
+
+
+@keyframes percent {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-width: 0;
+	}
+}
+
+.update{
+  width: 184px;
+  margin: 12px 0 9px 0;
+  padding:.8rem 1.5rem;
+  border-radius: 3px;
+  background-color: var(--blue);
+  color:var(--black);
+}
+
+.bookcard {
+background: var(--white);
+margin:2rem 0;
+padding:.3rem 1.5rem;
+border:1px solid var(--text-category)
+}
+.Book-info *{
+    margin:1rem 0;
+}
+
+.category{
+  color: #121212;
+  font-size:.9rem;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+}
+
+.author-name{}

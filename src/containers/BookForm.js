@@ -25,26 +25,30 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="title">
-          Book Title
-          <input onChange={handleChange} type="text" id="title" name="title" />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="booksCategory">
-          Select a category
-          <select onChange={handleChange} name="category" id="category">
-            <option value="All">All</option>
-            {bookCategories.map(category => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <h4>Add a new Book</h4>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="title">
+            Book Title
+            <input onChange={handleChange} type="text" id="title" name="title" />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="booksCategory">
+            Select a category
+            <select onChange={handleChange} name="category" id="category">
+              <option value="All">All</option>
+              {bookCategories.map(category => (
+                <option key={category} value={category}>{category}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
   );
 };
 
