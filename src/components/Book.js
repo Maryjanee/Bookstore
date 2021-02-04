@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import generateID from '../helpers/generateID';
+import '../styles/Book.css';
 
 const Book = props => {
   const {
@@ -10,14 +12,38 @@ const Book = props => {
   };
 
   return (
-    <tr>
-      <td>{bookId}</td>
-      <td>{bookTitle}</td>
-      <td>{bookCategory}</td>
-      <td>
-        <button type="button" onClick={handleRemoveBook}>Remove Book</button>
-      </td>
-    </tr>
+    <div className="bookcard">
+      <div className="Book-info">
+        <p>{bookCategory}</p>
+        <p>{bookTitle}</p>
+        <p>Tom Baker</p>
+
+        <div className="bookcard- btn">
+          <button type="button">Comment</button>
+          <button type="button" onClick={handleRemoveBook}>Remove Book</button>
+          <button type="button">Edit</button>
+
+        </div>
+      </div>
+
+      <div className="progress-ring">
+        <p>
+          {`${generateID()}%`}
+          <br />
+          completed
+        </p>
+      </div>
+
+      <div className="chapter-deets">
+        <p>Current Chapter </p>
+        <p>
+          Chapter
+          <span>{generateID()}</span>
+        </p>
+        <button type="button">Update Progress</button>
+      </div>
+
+    </div>
   );
 };
 
