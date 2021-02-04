@@ -20,7 +20,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
   };
 
   return (
-    <div>
+    <div className="mt-1">
       <label htmlFor="booksCategory">
         Select a category
         <select

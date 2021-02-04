@@ -46,6 +46,9 @@ header *{
 .ml-1{
   margin-left: 3rem;
 }
+.mt-1{
+  margin-top: 2rem;
+}
 
 h1{
   color:var(--blue);
@@ -55,5 +58,20 @@ h1{
 li:last-child{
   color:var(--text-black);
   font-weight: 500;
-  opacity: 0.5;
 }
+
+label{
+  font-size: 1.1rem;
+}
+
+  select {
+    border:1px solid var(--text-category);
+    width:100%;
+    padding:1.5rem 2rem;
+    font-size:1.3rem;
+    margin-top:1rem;
+    outline:none;
+    
+  }
+
+ 
