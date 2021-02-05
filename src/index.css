@@ -32,12 +32,11 @@ body {
   margin-right: 20rem;
 }
 
-.d-grid{
+.d-grid {
   display: grid;
 }
 
-.invalid{
-  color:#ff0038;
+.invalid {
+  color: #ff0038;
   font-weight: var(--bold-font);
 }
-
