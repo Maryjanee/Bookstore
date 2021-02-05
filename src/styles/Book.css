@@ -46,6 +46,7 @@ circle:nth-child(1) {
   margin: 2rem 0;
   padding: 1.3rem 3rem;
   border: 1px solid var(--text-category);
+  border-radius: .2rem;
 }
 
 .Book-info * {

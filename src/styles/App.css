@@ -69,4 +69,5 @@ select {
   font-size: 1.3rem;
   margin-top: 1rem;
   outline: none;
+  border-radius: .2rem;
 }
