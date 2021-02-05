@@ -15,7 +15,7 @@ circle {
 
 circle:nth-child(1) {
   stroke-dashoffset: 0;
-  stroke: #fff;
+  stroke: var(--text-category);
 }
 
 .percent1 circle:nth-child(2) {

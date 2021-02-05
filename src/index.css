@@ -36,3 +36,8 @@ body {
   display: grid;
 }
 
+.invalid{
+  color:#ff0038;
+  font-weight: var(--bold-font);
+}
+

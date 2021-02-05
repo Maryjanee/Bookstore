@@ -11,6 +11,7 @@ const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Lea
 const BookForm = () => {
   const dispatch = useDispatch();
   const [book, setBook] = useState({ title: '', category: '' });
+  const [submissionState, setSubmissionState] = useState(false);
 
   const handleChange = event => {
     const { id, value } = event.target;
@@ -19,15 +20,24 @@ const BookForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const newBook = { ...book, id: generateId() };
-
-    dispatch(createBook(newBook));
-    setBook({ title: '', category: '' });
+    const { title, category } = event.target;
+    if (category.value === '' || !(title.value) || !(category.value)) {
+      setSubmissionState(true);
+    } else {
+      setSubmissionState(false);
+      title.value = '';
+      category.value = '';
+      const newBook = { ...book, id: generateId() };
+      dispatch(createBook(newBook));
+      setBook({ title: '', category: '' });
+    }
   };
 
   return (
     <div>
       <h4 className="uppercase">Add a new Book</h4>
+      {submissionState === true ? <span className="invalid">Please check that your entry is valid</span>
+        : <span />}
       <form onSubmit={handleSubmit} className="d-grid">
         <div>
           <input onChange={handleChange} type="text" id="title" name="title" placeholder="Book Title" />
