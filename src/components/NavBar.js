@@ -12,9 +12,9 @@ const NavBar = () => (
         </ul>
       </div>
       <div className="profile-container">
-      <img src={user} alt="user" />
+        <img src={user} alt="user" />
       </div>
-     
+
     </div>
 
   </header>

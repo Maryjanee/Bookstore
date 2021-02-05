@@ -1,12 +1,11 @@
-.profile-container{
-    border: solid 3px #e8e8e8;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-   
+.profile-container {
+  border: solid 3px #e8e8e8;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
-img{
-    transform: translate(10px , 10px);
-    
+img {
+  width: 1.5rem;
+  transform: translate(15px, 13px);
 }

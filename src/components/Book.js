@@ -16,13 +16,13 @@ const Book = props => {
     <div className="bookcard d-flex">
       <div className="Book-info">
         <p className="category">{bookCategory}</p>
-        <p className="title">{bookTitle}</p>
+        <h2 className="title">{bookTitle}</h2>
         <p className="author-name">Tom Baker</p>
 
         <div className="bookcard-btn">
-          <button type="button" className="text-blue">Comment</button>
-          <button type="button" className="text-blue" onClick={handleRemoveBook}>Remove Book</button>
-          <button type="button" className="text-blue">Edit</button>
+          <button type="button">Comment</button>
+          <button type="button" onClick={handleRemoveBook}>Remove Book</button>
+          <button type="button">Edit</button>
 
         </div>
       </div>
@@ -37,15 +37,17 @@ const Book = props => {
             </svg>
           </div>
         </div>
-        <p>
-          {`${generateID()}%`}
-          <br />
-          completed
-        </p>
+        <div>
+          <p className="main">
+            {`${generateID()}%`}
+          </p>
+          <span>Completed</span>
+        </div>
+
       </div>
 
       <div className="chapter-deets">
-        <p>Current Chapter </p>
+        <p className="uppercase">Current Chapter </p>
         <p>
           Chapter
           <span>{generateID()}</span>
