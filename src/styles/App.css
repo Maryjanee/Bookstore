@@ -11,6 +11,7 @@
 button {
   border: 0;
   color: #fff;
+  outline: none;
 }
 
 li {
